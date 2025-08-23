@@ -1,0 +1,27 @@
+<suite name="ParallelSuite" parallel="methods" thread-count="4">
+    <test name="ParallelTestExecution">
+        <classes>
+            <class name="TestNG_Selenium.ClassTest1"/>
+             <class name="TestNG_Selenium.ClassTest2"/>
+        </classes>
+    </test>
+
+
+<suite name="DummyLoginPageSuite" parallel="classes" thread-count="2">
+    <test name="LoginTest">
+        <parameter name="username" value="admin"/>
+        <parameter name="password" value="admin123"/>
+        <classes>
+            <class name="testNG_practice.DummyLoginPage"/>
+        </classes>
+    </test>
+</suite>
+<suite name="ParallelSuite" parallel="classes" thread-count="1">
+    <test name="ParallelTestExecution">
+        <classes>
+            <class name="testng_package.TestClass1"/>
+            <class name="testng_package.TestClass2"/>
+        </classes>
+    </test>
+</suite>
+</suite>
